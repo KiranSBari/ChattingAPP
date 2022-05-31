@@ -7,13 +7,19 @@ import { FooterComponent } from './home/footer/footer.component';
 import { ContainerComponent } from './home/container/container.component';
 import { EncrDecrService } from './encr-decr.service';
 import { HeaderComponent } from './home/header/header.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
