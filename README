@@ -17,3 +17,8 @@ Task One
 Shweta: Auth
 Sneha: Frontend Form 
 Kiran: 
+
+
+Tables:
+login : username PK, password
+chat: username FK,message,date

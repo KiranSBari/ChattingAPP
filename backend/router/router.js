@@ -4,17 +4,18 @@
 //router mapping code
 module.exports  = function(app) {
     
-    var ChattingController = require('../controller/ChattingController');
+    var chatcontroller = require('../controller/chatcontroller');
+    var logincontroller = require('../controller/logincontroller')
  
-    //************Registration API **************/
-    app.route('/api/chatting')
-    .get(ChattingController.getAll)
-    .post(ChattingController.insert);
+    //************login table **************//
 
-    // app.route('/api/chatting/:ID')
-    // .get(ChattingController.getBy)
-    // .put(ChattingController.update)
-    // .delete(ChattingController.remove);
- 
+     app.route('/api/login')
+    .get(logincontroller.getAll);
+  //  .post(logincontroller.insert);
+
+
+    //************chat table **************//
+     app.route('/api/chat')
+    .get(chatcontroller.getAll);
 };
 
