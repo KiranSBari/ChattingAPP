@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HedderComponent } from './home/hedder/hedder.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { ContainerComponent } from './home/container/container.component';
+import { EncrDecrService } from './encr-decr.service';
+import { HeaderComponent } from './home/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HedderComponent,
+    HeaderComponent,
     FooterComponent,
     ContainerComponent
   ],
@@ -18,7 +19,7 @@ import { ContainerComponent } from './home/container/container.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EncrDecrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
