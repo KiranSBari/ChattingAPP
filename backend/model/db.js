@@ -4,12 +4,14 @@ var mysql= require('mysql');
 //define connection configuration 
 
 var connection=mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    port:3366,
+    host:'192.168.6.204',
+    user:'mydatabase',
+    'Connection Timeout':'15',
+    Protocol	:'socket',
+    password:'nopass',
+    port: 3366,
     multipleStatements:true,
-    database:'online_chatting'
+    database:'localchatting'
 
 });
 
