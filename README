@@ -1,6 +1,13 @@
 Angular CLI: 13.3.5
 Node : v14.17.5
 NPM: 6.14.14
+*******************Librarys Installed**********
+Backend**
+formidable: 
+
+Frontend**
+Angular materials: ng add @angular/material
+crypto-js : 
 
 *******************Planning ********************
 1. Auth 

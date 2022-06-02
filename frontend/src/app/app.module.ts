@@ -7,17 +7,21 @@ import { FooterComponent } from './home/footer/footer.component';
 import { ContainerComponent } from './home/container/container.component';
 import { EncrDecrService } from './encr-decr.service';
 import { HeaderComponent } from './home/header/header.component';
+import { DialogComponent } from './upload/dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeModule } from './home/home.module';
+import { UploadModule } from './upload/upload.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    ContainerComponent
+    AppComponent   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HomeModule,
+    UploadModule
   ],
   providers: [EncrDecrService],
   bootstrap: [AppComponent]

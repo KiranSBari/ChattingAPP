@@ -5,16 +5,14 @@
 module.exports  = function(app) {
     
     var ChattingController = require('../controller/ChattingController');
- 
+    var UploadController = require('../controller/UploadController');
     //************Registration API **************/
     app.route('/api/chatting')
     .get(ChattingController.getAll)
     .post(ChattingController.insert);
 
-    // app.route('/api/chatting/:ID')
-    // .get(ChattingController.getBy)
-    // .put(ChattingController.update)
-    // .delete(ChattingController.remove);
+    app.route('/api/upload')
+    .post(UploadController.upload);
  
 };
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { EncrDecrService } from 'src/app/encr-decr.service';
+import { DialogComponent } from 'src/app/upload/dialog/dialog.component';
 
 @Component({
   selector: 'app-container',
@@ -8,7 +10,7 @@ import { EncrDecrService } from 'src/app/encr-decr.service';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor(private EncrDecr: EncrDecrService) { }
+  constructor(private EncrDecr: EncrDecrService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
     var encrypted = this.EncrDecr.set('123456$#@$shweta', 'Sneha');
@@ -18,4 +20,7 @@ export class ContainerComponent implements OnInit {
     console.log('Encrypted :' + decrypted);
   }
 
+  public openUploadDialog() {
+    let dialogRef = this.dialog.open(DialogComponent, { width: '50%', height: '50%' });
+  }
 }

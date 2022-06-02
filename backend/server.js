@@ -18,5 +18,5 @@ app.listen(3115,function(err){
   console.log("🌍 Server is listening on port 3115");
 });
 process.on('uncaughtException', function(ex) { // for any exception from API should NOT stop the server 
-  console.log("Getting error from API");
+  console.log("Getting error from API" +ex);
 });
