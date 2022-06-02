@@ -8,8 +8,9 @@ formidable:
 Frontend**
 Angular materials: ng add @angular/material
 crypto-js : 
+ng add angular-bootstrap-md
 
-*******************Planning ********************
+*******************Planning ******************
 1. Auth 
 2. Encryption 
 3. Frontend (chatting form, login form)

@@ -2,12 +2,13 @@
     <div class="block">
         <form>
             <h2>LOGIN FORM</h2>
-            <input  type="text" placeholder="Enter Name" class="log" />
-            <input type="text" placeholder="Enter" class="log" />
+            <input type="text" placeholder="Enter Name" name="username" class="log" required [(ngModel)]="Customer.username"/>
+            <input type="text" placeholder="Enter Password" name="password" class="log" required [(ngModel)]="Customer.password"/>
             <div class="btns">
-                <button class="btn btn-primary">Login</button>
-                <button class="btn btn-primary">Sign Up</button>
+                <button class="btn btn-primary">Sign UP</button>
+                <button type="submit"  (click)="getCustomerLogin()"class="btn btn-primary">Login </button>
             </div>
         </form>
     </div>
 </div>
+

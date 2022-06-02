@@ -10,14 +10,19 @@ import { DialogComponent } from 'src/app/upload/dialog/dialog.component';
 })
 export class ContainerComponent implements OnInit {
 
+  Sneha={
+    "name":"John",
+    "age":30,
+    "cars":["Ford", "BMW", "Fiat"]
+    }
   constructor(private EncrDecr: EncrDecrService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    var encrypted = this.EncrDecr.set('123456$#@$shweta', 'Sneha');
+    var encrypted = this.EncrDecr.set('123456$#@$shweta', this.Sneha);
     var decrypted = this.EncrDecr.get('123456$#@$shweta', encrypted);
    
     console.log('Encrypted :' + encrypted);
-    console.log('Encrypted :' + decrypted);
+    console.log(decrypted);
   }
 
   public openUploadDialog() {

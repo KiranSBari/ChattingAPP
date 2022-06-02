@@ -21,5 +21,6 @@ exports.upload = function (req, res) {
     console.log(location);
     res.json({ body: location });
   });
+  console.log(req);
   form.parse(req);
 };
