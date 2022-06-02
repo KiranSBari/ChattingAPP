@@ -4,6 +4,7 @@
 //router mapping code
 module.exports  = function(app) {
     
+
     var ChattingController = require('../controller/ChattingController');
     var UploadController = require('../controller/UploadController');
     //************Registration API **************/
@@ -14,5 +15,20 @@ module.exports  = function(app) {
     app.route('/api/upload')
     .post(UploadController.upload);
  
+
+    var chatcontroller = require('../controller/chatcontroller');
+    var logincontroller = require('../controller/logincontroller')
+ 
+    //************login table **************//
+
+     app.route('/api/login')
+    .get(logincontroller.getAll);
+  //  .post(logincontroller.insert);
+
+
+    //************chat table **************//
+     app.route('/api/chat')
+    .get(chatcontroller.getAll);
+
 };
 
