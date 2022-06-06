@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChatComponent } from './chat/chat.component';
+import { FormsModule } from '@angular/forms';
 
 
 // MDB Angular Free
@@ -12,6 +13,7 @@ import { ChatComponent } from './chat/chat.component';
   ],
   imports: [
     CommonModule,
+    FormsModule
    
   ]
 })
